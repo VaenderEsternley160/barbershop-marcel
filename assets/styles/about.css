@@ -12,7 +12,7 @@ main {
 /* Background */
 body {
     background-image:  url('/assets/images/bg-barber.jpeg');
-    background-size: 100% 665px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
     margin: 0;
