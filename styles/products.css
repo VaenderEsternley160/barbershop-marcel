@@ -523,3 +523,46 @@
     }
 
 }
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-harga,
+.btn-booking {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.btn-harga {
+    background-color: #c9a66b;
+    color: #2f211a;
+}
+
+
+.btn-booking {
+    background-color: #ffffff;
+    color: #3b281d;
+    border: 2px solid #c9a66b;
+}
+
+
+.btn-harga:hover {
+    background-color: #e0bd7d;
+    transform: translateY(-3px);
+}
+
+.btn-booking:hover {
+    background-color: #c9a66b;
+    color: #2f211a;
+    transform: translateY(-3px);
+}
