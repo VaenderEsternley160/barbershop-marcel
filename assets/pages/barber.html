@@ -1,250 +1,154 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Barber</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
 
-        body {
-            background: linear-gradient(135deg, #2c1810 0%, #422c20 50%, #2c1810 100%);
-            min-height: 100vh;
-            padding: 60px 40px;
-            text-align: center;
-            position: relative;
-            overflow-x: hidden;
-        }
+    <title>Profil Barber | Marcel Barbershop</title>
 
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 40%),
-                radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(139, 90, 43, 0.05) 0%, transparent 60%);
-            pointer-events: none;
-            z-index: 0;
-        }
+    <link rel="stylesheet" href="/assets/styles/global.css">
+    <link rel="stylesheet" href="/assets/styles/barber.css">
 
-        .bg-decoration {
-            position: fixed;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.06;
-            color: #d4af37;
-            font-size: 280px;
-        }
-
-        .scissors-1 {
-            top: 5%;
-            left: 3%;
-            transform: rotate(-15deg);
-        }
-
-        .razor {
-            top: 20%;
-            right: 5%;
-            transform: rotate(25deg);
-        }
-
-        .comb {
-            bottom: 10%;
-            left: 5%;
-            transform: rotate(-30deg);
-        }
-
-        .scissors-2 {
-            bottom: 5%;
-            right: 3%;
-            transform: rotate(15deg);
-        }
-
-        .barber-line {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(180deg, 
-                transparent, 
-                rgba(30, 60, 114, 0.15) 20%, 
-                rgba(255, 255, 255, 0.08) 40%, 
-                rgba(200, 30, 30, 0.15) 60%, 
-                transparent 80%
-            );
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .line-1 { left: 8%; }
-        .line-2 { left: 15%; }
-        .line-3 { right: 8%; }
-        .line-4 { right: 15%; }
-        
-        .content-wrapper {
-            position: relative;
-            z-index: 1;
-        }
-
-        h2 {
-            color: #d4af37;
-            margin-bottom: 60px;
-            font-size: 52px;
-            font-weight: bold;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-            position: relative;
-            display: inline-block;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 180px;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-        }
-
-        .profiles-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-            justify-items: center;
-        }
-
-        .profile-card {
-            background: linear-gradient(145deg, #fff8f0, #f5ebe0);
-            padding: 60px 40px;
-            border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            width: 400px;
-            border: 3px solid #d4af37;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #1e3c72, #ffffff, #c81e1e, #ffffff, #1e3c72);
-        }
-
-        .profile-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-            border-color: #e6c650;
-        }
-
-        .profile-img {
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #d4af37;
-            box-shadow: 0 0 0 3px #8b5a2b, 0 4px 12px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .profile-name {
-            font-size: 32px;
-            color: #2c1810;
-            margin-bottom: 12px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .profile-role {
-            font-size: 16px;
-            color: #8b5a2b;
-            font-style: italic;
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 900px) {
-            .profiles-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .profile-card {
-                width: 340px;
-                padding: 40px 30px;
-            }
-            .profile-img {
-                width: 200px;
-                height: 200px;
-            }
-            h2 {
-                font-size: 36px;
-                margin-bottom: 40px;
-            }
-            .barber-line {
-                display: none;
-            }
-        }
-    </style>
 </head>
+
 <body>
+    
+    <section class="profile-section">
 
-    <div class="barber-line line-1"></div>
-    <div class="barber-line line-2"></div>
-    <div class="barber-line line-3"></div>
-    <div class="barber-line line-4"></div>
+        <div class="profile-header">
 
-    <div class="bg-decoration scissors-1">✂</div>
-    <div class="bg-decoration razor">🪒</div>
-    <div class="bg-decoration comb">🪮</div>
-    <div class="bg-decoration scissors-2">✂</div>
+            <span class="profile-subtitle">
+                MARCEL BARBERSHOP
+            </span>
 
-    <div class="content-wrapper">
-        <h2>PROFIL BARBER</h2>
+            <h1>Barber Kita</h1>
 
-        <div class="profiles-container">
-            <div class="profile-card">
-                <img src="/Image/Vaender.png" alt="Profile Picture" class="profile-img">
-                <h3 class="profile-name">Vaender Esternley</h3>
-                <p class="profile-role">Fade & Precision Specialist</p>
-            </div>
+            <p>
+                Kenali barber profesional kami yang siap memberikan
+                pengalaman potong rambut terbaik untuk Anda.
+            </p>
 
-            <div class="profile-card">
-                <img src="/Image/Calvin.png" alt="Profile Picture" class="profile-img">
-                <h3 class="profile-name">Calvin Sebastian Kadir</h3>
-                <p class="profile-role">Beard & Shave Specialist</p>
-            </div>
+            <div class="title-line"></div>
 
-            <div class="profile-card">
-                <img src="/Image/Richardo.png" alt="Profile Picture" class="profile-img">
-                <h3 class="profile-name">Richardo Alexander</h3>
-                <p class="profile-role">Hair Tattoo / Freestyle Artist</p>
-            </div>
-
-            <div class="profile-card">
-                <img src="/Image/Hansen.png" alt="Profile Picture" class="profile-img">
-                <h3 class="profile-name">Hansencius Thenrine</h3>
-                <p class="profile-role">Texture & Perm Specialist</p>
-            </div>
         </div>
-    </div>
+
+        <div class="barber-container">
+
+
+            <!-- BARBER 1 -->
+            <div class="barber-card">
+
+                <div class="barber-image">
+                    <img src="/assets/images/profile-barber/barber-1.jpeg"
+                         alt="Rianiayan">
+                </div>
+
+                <div class="barber-info">
+
+                    <h2>Rianiayan</h2>
+
+                    <span class="barber-role">
+                        Fade & Precision Specialist
+                    </span>
+
+                    <p>
+                        Ahli dalam teknik fade, taper, dan precision
+                        haircut untuk menghasilkan potongan yang rapi
+                        dan modern.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BARBER 2 -->
+            <div class="barber-card">
+
+                <div class="barber-image">
+                    <img src="/assets/images/profile-barber/barber-2.jpeg"
+                         alt="Elestial HD">
+                </div>
+
+                <div class="barber-info">
+
+                    <h2>Elestial HD</h2>
+
+                    <span class="barber-role">
+                        Beard & Shave Specialist
+                    </span>
+
+                    <p>
+                        Berpengalaman dalam perawatan jenggot,
+                        shaving, dan pembentukan garis rambut
+                        agar terlihat lebih profesional.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BARBER 3 -->
+            <div class="barber-card">
+
+                <div class="barber-image">
+                    <img src="/assets/images/profile-barber/barber-3.jpeg"
+                         alt="Nevin">
+                </div>
+
+                <div class="barber-info">
+
+                    <h2>Nevin</h2>
+
+                    <span class="barber-role">
+                        Classic Haircut Specialist
+                    </span>
+
+                    <p>
+                        Menguasai berbagai gaya potongan klasik
+                        dengan hasil yang elegan, bersih,
+                        dan sesuai karakter pelanggan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BARBER 4 -->
+            <div class="barber-card">
+
+                <div class="barber-image">
+                    <img src="/assets/images/profile-barber/barber-4.jpeg"
+                         alt="Arthur">
+                </div>
+
+                <div class="barber-info">
+
+                    <h2>Arthur</h2>
+
+                    <span class="barber-role">
+                        Modern Hairstyle Specialist
+                    </span>
+
+                    <p>
+                        Spesialis gaya rambut modern yang
+                        mengikuti tren dengan memperhatikan
+                        bentuk dan karakter rambut pelanggan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
 
 </body>
 </html>
