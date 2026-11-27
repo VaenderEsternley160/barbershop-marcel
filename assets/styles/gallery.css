@@ -138,5 +138,16 @@ body {
 
 
 nav {
-    max-width: 1101px;
+    max-width: 1087px;
+}
+
+.destination {
+    color: #f5e6ce;
+    background-color: #3b2419;
+    font-size: 20px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    opacity: 0.9;
 }
