@@ -111,3 +111,32 @@ a:hover {
 nav .menu {
     padding-bottom: 45px;
 }
+
+
+/* Profile */
+.profile {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.marcel {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #653e28;
+    color: #cd9b6f;
+    font-weight: bold;
+    border: 2px solid #653e28;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.marcel:hover {
+    background-color: #41281a;
+    color: #987353;
+    border-color: #462b1b;
+    transform: translateY(-2px);
+}
+
+.marcel:active {
+    transform: translateY(2px);
+}
