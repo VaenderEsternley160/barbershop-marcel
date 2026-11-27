@@ -1,14 +1,12 @@
 .pricing-page {
     margin: 0;
     min-height: 100vh;
-
     background-color: #C9A477;
-    background-image: url("../assets/images/hero/marcel-background.jpeg");
+    background-image: url("/assets/images/bg-barber.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     color: #35251D;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -28,53 +26,99 @@
     text-decoration: none;
 }
 
+/* HEADER */
 .pricing-header {
-    background-color: #35251D;
-    color: #FFFFFF;
-    padding: 12px 0;
-    border-bottom: 2px solid #C5A56A;
+    width: 100%;
+    height: 80px;
+    padding: 0;
+    background-color: rgba(53, 35, 27, 0.88);
+    border-bottom: 2px solid #C6A15B;
+    box-sizing: border-box;
 }
 
+
 .pricing-header-inner {
+    width: 86%;
+    max-width: none;
+    height: 100%;
+    margin: 0 auto;
+
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
 }
 
+
+.pricing-header .pricing-nav {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-left: auto;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+
+    position: static;
+    z-index: auto;
+}
+
+/* LOGO */
 .pricing-brand {
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 100px;
     flex-shrink: 0;
 }
 
 .pricing-brand-logo {
-    width: 125px;
-    height: 75px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     display: block;
+}
+
+/* NAVIGATION */
+.pricing-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 0;
 }
 
 .pricing-nav ul {
     display: flex;
     align-items: center;
-    gap: 25px;
+    justify-content: flex-end;
+    gap: 35px;
+
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .pricing-nav a {
-    color: #F5EBDD;
-    font-size: 14px;
-    font-weight: 500;
+    color: #F5E9D5;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .pricing-nav a:hover,
 .pricing-nav a.active {
-    color: #D6AD75;
+    color: #D5AE68;
 }
+
 
 .pricing-hero {
     position: relative;
@@ -106,6 +150,8 @@
     font-size: 16px;
 }
 
+/* BUTTON */
+
 .pricing-button {
     display: inline-block;
     background-color: #C5A56A;
@@ -114,16 +160,15 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: bold;
-
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
 }
 
 .pricing-button:hover {
     background-color: #E0C28A;
     transform: translateY(-3px);
 }
+
 
 .pricing-section-heading {
     text-align: center;
@@ -141,6 +186,7 @@
     color: #5B4030;
     margin: 0;
 }
+
 
 .pricing-packages {
     padding: 85px 0;
@@ -161,13 +207,10 @@
     border: 1px solid #C49A6C;
     border-radius: 8px;
     padding: 32px 27px;
-
     display: flex;
     flex-direction: column;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .pricing-card:hover {
@@ -185,13 +228,10 @@
     top: -14px;
     left: 50%;
     transform: translateX(-50%);
-
     background-color: #C5A56A;
     color: #35251D;
-
     padding: 5px 17px;
     border-radius: 20px;
-
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -225,7 +265,6 @@
     align-items: baseline;
     flex-wrap: wrap;
     gap: 3px;
-
     margin: 27px 0 20px;
     color: #35251D;
 }
@@ -277,16 +316,12 @@
 .pricing-card-button {
     display: block;
     text-align: center;
-
     padding: 12px;
-
     border: 1px solid #98703F;
     border-radius: 4px;
-
     color: #6F4E37;
     font-size: 14px;
     font-weight: bold;
-
     transition: all 0.3s ease;
 }
 
@@ -316,6 +351,8 @@
 .pricing-extras .pricing-section-heading > p:last-child {
     color: #E8D8C8;
 }
+
+/* TABLE */
 
 .pricing-table-wrapper {
     overflow-x: auto;
@@ -373,6 +410,7 @@
     white-space: nowrap;
 }
 
+
 .pricing-information {
     padding: 85px 0;
     background-color: rgba(111, 78, 55, 0.18);
@@ -381,10 +419,8 @@
 .pricing-info-box {
     position: relative;
     overflow: hidden;
-
     background-color: #35251D;
     color: #FFFFFF;
-
     border-radius: 8px;
     padding: 55px;
 }
@@ -411,14 +447,14 @@
     right: 50px;
     top: 50%;
     transform: translateY(-50%);
-
     font-size: 170px;
     font-weight: bold;
     line-height: 1;
-
     color: rgba(197, 165, 106, 0.15);
     pointer-events: none;
 }
+
+/* FOOTER */
 
 .pricing-footer {
     background-color: #35251D;
@@ -456,90 +492,4 @@
 
 .pricing-footer-location {
     text-align: right;
-}
-
-.pricing-footer-bottom {
-    border-top: 1px solid #665044;
-    padding-top: 15px;
-    text-align: center;
-}
-
-.pricing-footer-bottom p {
-    color: #C8B5A3;
-    font-size: 12px;
-    margin: 0;
-}
-
-@media (max-width: 900px) {
-
-    .pricing-header-inner {
-        flex-direction: column;
-    }
-
-    .pricing-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px 22px;
-    }
-
-    .pricing-card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .pricing-card-featured {
-        grid-column: 1 / -1;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    .pricing-hero {
-        padding: 70px 15px;
-    }
-
-    .pricing-hero h1 {
-        font-size: 35px;
-    }
-
-    .pricing-section-heading h2 {
-        font-size: 26px;
-    }
-
-    .pricing-card-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-card-featured {
-        grid-column: auto;
-    }
-
-    .pricing-info-box {
-        padding: 35px 25px;
-    }
-
-    .pricing-info-decoration {
-        right: 10px;
-        font-size: 100px;
-    }
-
-    .pricing-footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .pricing-footer-location {
-        text-align: left;
-    }
-
-    .pricing-table th,
-    .pricing-table td {
-        padding: 13px;
-    }
-
-    .pricing-brand-logo {
-        width: 115px;
-        height: 70px;
-    }
-
 }
