@@ -17,7 +17,7 @@ main {
 
 /* Background */
 body {
-    background-image:  url('/assets/images/bg-barber.jpeg');
+    background-image:  url('/assets/images/hero/bg_barber.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
